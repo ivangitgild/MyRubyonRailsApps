@@ -1,4 +1,6 @@
 Myapps::Application.routes.draw do
+  resources :adminusers
+
   resources :users
 
   get "home/index"
