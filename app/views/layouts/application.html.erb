@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Pfizer Virtual Library</title>
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+	<%= javascript_include_tag "application" %>
+	<%= csrf_meta_tags %>
+	
+	<script type="text/javascript">
+	 $(document).ready( function(){	
+			var buttons = { previous:$('#jslidernews2 .button-previous') ,
+							next:$('#jslidernews2 .button-next') };			 
+			$('#jslidernews2').lofJSidernews( { interval:5000,
+								easing:'easeInOutQuad',
+								duration:1200,
+								auto:true,
+								mainWidth:684,
+								mainHeight:300,
+								navigatorHeight		: 100,
+								navigatorWidth		: 350,
+								maxItemDisplay:4,
+								buttons:buttons } );						
+		});
+
+	</script>
+	<style>
+
+		ul.lof-main-wapper li {
+			position:relative;	
+		}
+	</style>
+</head>
+	
+	<body>
+		<div id="page">
+			<div class="wrap_out">
+				<div class="wrap_in">
+					<div class="head">
+						<div class="logo">
+							<div class="hleft">
+								
+								<h1 class="title">Pfizer Virtual Library <br> <span style="margin-left: 50px">and Laboratory</span></h1>
+								<%= image_tag "logo.png" %>
+							</div>
+							<div class="hright">
+								<%= image_tag "google.png" %>
+								<%= image_tag "google.png" %>
+								<%= image_tag "google.png" %>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="navigation">
+							<div id="nav">
+								<ul>
+									<li><a href="#">Home</a></li>
+									<li><a href="#">News</a></li>
+									<li><a href="#">About Us</a></li>
+									<li><a href="#">Contact Us</a></li>
+								</ul>
+							</div>
+							<div id="search">
+								<span>
+									<input type="text" value="search.." name="search" onBlur="this.value='search..'" onFocus="this.value=''">
+									<input type="submit" value="GO">
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="contents">
+						<%= yield %>
+					</div>
+<div class="footer">
+						<div id="nav2">
+							<ul>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">News</a></li>
+								<li><a href="#">About Us</a></li>
+								<li><a href="#">Contact Us</a></li>
+							</ul>
+						</div>
+						<div id="copy">
+							<span>Copyright &copy; Pfizer Virtual Library.</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+</body>
+</html>
