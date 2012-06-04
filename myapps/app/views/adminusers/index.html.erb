@@ -7,6 +7,7 @@
     <th>Fullname</th>
     <th>Address</th>
     <th>Age</th>
+	<th>Password</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,6 +20,7 @@
     <td><%= adminuser.fullname %></td>
     <td><%= adminuser.address %></td>
     <td><%= adminuser.age %></td>
+	<td><%= adminuser.password %></td>
     <td><%= link_to 'Show', adminuser %></td>
     <td><%= link_to 'Edit', edit_adminuser_path(adminuser) %></td>
     <td><%= link_to 'Destroy', adminuser, confirm: 'Are you sure?', method: :delete %></td>
