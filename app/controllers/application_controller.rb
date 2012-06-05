@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-	 before_filter :login_required
+  before_filter :login_required
   protect_from_forgery
   #before_filter :set_user
  
@@ -14,7 +14,9 @@ class ApplicationController < ActionController::Base
 
     def login_required
      # return true if @user
-      access_denied
+	  if !session[:user_id]
+        access_denied
+	  end
      # return false
     end
 

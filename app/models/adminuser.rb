@@ -13,15 +13,9 @@ class Adminuser < ActiveRecord::Base
        self.password = Digest::MD5.hexdigest(self.password)
   end
   
-
+ 
   def password_matches?(password_to_match)
-	
-	#if !password_to_match.nil? 
 		self.password == Digest::MD5.hexdigest(password_to_match)
-	#else
-		#puts 'hello'
-	#end
-	
   end
  
   

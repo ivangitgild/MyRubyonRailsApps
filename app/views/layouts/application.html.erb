@@ -52,12 +52,7 @@
 						<div class="clear"></div>
 						<div class="navigation">
 							<div id="nav">
-								<ul>
-									<li><a href="#">Home</a></li>
-									<li><a href="#">News</a></li>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Contact Us</a></li>
-								</ul>
+								<%= render :partial => "menu", :layout => "menu" %>
 							</div>
 							<div id="search">
 								<span>
@@ -71,7 +66,7 @@
 					<div class="contents">
 						<%= yield %>
 					</div>
-<div class="footer">
+					<div class="footer">
 						<div id="nav2">
 							<ul>
 								<li><a href="#">Home</a></li>

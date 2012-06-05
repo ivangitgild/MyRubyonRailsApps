@@ -1,4 +1,6 @@
 Myapps::Application.routes.draw do
+  resources :fuckforms
+
   get "adminusers/login"
   post "adminusers/login"
   get "adminuser/login"

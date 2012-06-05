@@ -1,0 +1,21 @@
+<h1>Listing fuckforms</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fuckforms.each do |fuckform| %>
+  <tr>
+    <td><%= link_to 'Show', fuckform %></td>
+    <td><%= link_to 'Edit', edit_fuckform_path(fuckform) %></td>
+    <td><%= link_to 'Destroy', fuckform, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fuckform', new_fuckform_path %>
