@@ -1,10 +1,16 @@
 Myapps::Application.routes.draw do
+  get "adminusers/login"
+  post "adminusers/login"
+  get "adminuser/login"
+
   resources :adminusers
-
+  resources :login
   resources :users
-
+	
   get "home/index"
   get "users/index"
+  get "login/index"
+  get "adminusers/index"
   resources :posts do
   resources :comments
 end

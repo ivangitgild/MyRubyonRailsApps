@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AdminusersControllerTest < ActionController::TestCase
+class AdminuserControllerTest < ActionController::TestCase
   test "should get login" do
     get :login
     assert_response :success
