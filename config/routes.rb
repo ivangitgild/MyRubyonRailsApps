@@ -1,10 +1,12 @@
 Myapps::Application.routes.draw do
+  resources :products
+
   resources :fuckforms
 
   get "adminusers/login"
   post "adminusers/login"
   get "adminuser/login"
-
+	get "products/buy/"
   resources :adminusers
   resources :login
   resources :users
@@ -13,6 +15,8 @@ Myapps::Application.routes.draw do
   get "users/index"
   get "login/index"
   get "adminusers/index"
+  get "products/index"
+  
   resources :posts do
   resources :comments
 end
@@ -20,7 +24,7 @@ end
   # first created -> highest priority.
 
   # Sample of regular route:
-  #   match 'products/:id' => 'catalog#view'
+     match 'products/buy/:id' => 'products#buy'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:

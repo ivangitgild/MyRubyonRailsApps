@@ -52,7 +52,9 @@
 						<div class="clear"></div>
 						<div class="navigation">
 							<div id="nav">
-								<%= render :partial => "menu", :layout => "menu" %>
+								
+								<%= yield :menu %>
+
 							</div>
 							<div id="search">
 								<span>
@@ -86,3 +88,5 @@
 </html>
 </body>
 </html>
+
+
