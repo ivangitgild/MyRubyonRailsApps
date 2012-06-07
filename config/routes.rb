@@ -1,19 +1,19 @@
 Myapps::Application.routes.draw do
   resources :products
-
-  resources :fuckforms
-
-  get "adminusers/login"
-  post "adminusers/login"
-  get "adminuser/login"
-	get "products/buy/"
-  resources :adminusers
+	resources :adminusers
   resources :login
   resources :users
-	
+  resources :fuckforms
+
+  #get "adminusers/login"
+  #post "adminusers/login"
+  #get "adminuser/login"
+	get "products/buy/"
   get "home/index"
   get "users/index"
   get "login/index"
+  post "login/index"
+  get "login/logout"
   get "adminusers/index"
   get "products/index"
   

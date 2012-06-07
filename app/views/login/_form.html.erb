@@ -1,13 +1,14 @@
-<%= form_for :login, @user do |f| %>
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<% if flash[:notice] %>
+  <%= h flash[:notice] %>
+<% end %>
+<%= form_tag "login/index" do%>
+
+  <%= label_tag :username, "Username: " %><br>
+  <%= text_field_tag :username %><br>
+
+  <%= label_tag :password, "Password:" %><br>
+  <%= password_field_tag :password %><br>
+
+  <%= submit_tag "Login" %>
+
 <% end %>

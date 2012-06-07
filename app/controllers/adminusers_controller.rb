@@ -1,7 +1,7 @@
 class AdminusersController < ApplicationController
 	
-	#before_filter :login_required
-	skip_before_filter :login_required
+	before_filter :login_required
+	#skip_before_filter :login_required
   def login
 	
    if request.post? and params[:username]

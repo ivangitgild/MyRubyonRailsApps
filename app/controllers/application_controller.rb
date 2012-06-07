@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
     def access_denied
      # session[:return_to] = request.request_uri
       flash[:error] = 'Oops. You need to login before you can view that page.' 
-      redirect_to :controller => 'adminusers', :action => 'login'
+      redirect_to :controller => 'login'
     end
   
 

@@ -53,7 +53,16 @@
 						<div class="navigation">
 							<div id="nav">
 								
-								<%= yield :menu %>
+								<ul>
+									<li><%= link_to "Home", "/" %></li>
+									<li><%= link_to "Products", "products" %></li>
+									<li><%= link_to "Users", "users" %></li>
+									<% if session[:user_id].nil? %>
+										<li><%= link_to "Login", "login" %></li>
+									<% else %>
+										<li><%= link_to "Logout", "logout" %></li>
+									<% end %>
+								</ul>
 
 							</div>
 							<div id="search">
